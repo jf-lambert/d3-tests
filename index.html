@@ -10,37 +10,12 @@
     <title>D3 TESTS</title>
 </head>
 <body>
-    <script>
-        var data = [10, 5, 12, 15];
-        
-        var width = 300 
-           scaleFactor = 20, 
-           barHeight = 30;
-        
-        var graph = d3.select("body")
-           .append("svg")
-           .attr("width", width)
-           .attr("height", barHeight * data.length);
-        
-        var bar = graph.selectAll("g")
-           .data(data)
-           .enter()
-           .append("g")
-           .attr("transform", function(d, i) {
-              return "translate(0," + i * barHeight + ")";
-           });
-        bar.append("rect").attr("width", function(d) {
-           return d * scaleFactor;
-        })
-        
-        .attr("height", barHeight - 1);
-        
-        bar.append("text")
-           .attr("x", function(d) { return (d*scaleFactor); })
-           .attr("y", barHeight / 2)
-           .attr("dy", ".35em")
-           .text(function(d) { return d; });
-     </script>
+   <svg width="500" height="500">
+      <g id="left" transform="translate(30, 40)"></g>
+      <g id="right" transform="translate(450, 40)"></g>
+      <g id="top" transform="translate(40, 30)"></g>
+      <g id="bottom" transform="translate(40, 450)"></g>
+    </svg>
 <script src="src/js/app.js"></script>
 </body>
 </html>

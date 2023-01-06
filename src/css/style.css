@@ -1,9 +1,17 @@
-svg rect {
-    fill: gray;
+.line {
+   fill: none;
+   stroke-width: 2px;
  }
  
- svg text {
-    fill: yellow;
-    font: 12px sans-serif;
-    text-anchor: end;
+ .line:hover{
+   stroke-width: 5px;  
  }
+ 
+ .grid line{
+   stroke: gainsboro;
+ }
+ 
+ .grid path {
+   stroke: black;
+ }
+ 
